@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		173E5DFB1F7C95CA001B058D /* 吹牛图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 173E5DFA1F7C95C0001B058D /* 吹牛图标.png */; };
+		17B23BAF1F7B566E0033ECEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B23BAE1F7B566E0033ECEC /* AppDelegate.swift */; };
+		17B23BB11F7B566E0033ECEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B23BB01F7B566E0033ECEC /* ViewController.swift */; };
+		17B23BB41F7B566E0033ECEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B23BB21F7B566E0033ECEC /* Main.storyboard */; };
+		17B23BB61F7B566E0033ECEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B23BB51F7B566E0033ECEC /* Assets.xcassets */; };
+		17B23BB91F7B566E0033ECEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B23BB71F7B566E0033ECEC /* LaunchScreen.storyboard */; };
+		17B23BC41F7B566E0033ECEC /* SearchTicketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B23BC31F7B566E0033ECEC /* SearchTicketTests.swift */; };
+		17B23BCF1F7B566E0033ECEC /* SearchTicketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B23BCE1F7B566E0033ECEC /* SearchTicketUITests.swift */; };
+		17B23BDD1F7B7CBC0033ECEC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B23BDC1F7B7CBC0033ECEC /* DataModel.swift */; };
+		BBAD0BE86A8B411DC0E43BC0 /* Pods_SearchTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE5E23AC0F9F7A8388E3F9C /* Pods_SearchTicket.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17B23BC01F7B566E0033ECEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17B23BA31F7B566E0033ECEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17B23BAA1F7B566E0033ECEC;
+			remoteInfo = SearchTicket;
+		};
+		17B23BCB1F7B566E0033ECEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17B23BA31F7B566E0033ECEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17B23BAA1F7B566E0033ECEC;
+			remoteInfo = SearchTicket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		173E5DFA1F7C95C0001B058D /* 吹牛图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "吹牛图标.png"; path = "Assets.xcassets/notice.imageset/吹牛图标.png"; sourceTree = "<group>"; };
+		17B23BAB1F7B566E0033ECEC /* SearchTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B23BAE1F7B566E0033ECEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17B23BB01F7B566E0033ECEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17B23BB31F7B566E0033ECEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17B23BB51F7B566E0033ECEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17B23BB81F7B566E0033ECEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17B23BBA1F7B566E0033ECEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B23BBF1F7B566E0033ECEC /* SearchTicketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchTicketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B23BC31F7B566E0033ECEC /* SearchTicketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTicketTests.swift; sourceTree = "<group>"; };
+		17B23BC51F7B566E0033ECEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B23BCA1F7B566E0033ECEC /* SearchTicketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchTicketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B23BCE1F7B566E0033ECEC /* SearchTicketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTicketUITests.swift; sourceTree = "<group>"; };
+		17B23BD01F7B566E0033ECEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B23BDC1F7B7CBC0033ECEC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		5FE5E23AC0F9F7A8388E3F9C /* Pods_SearchTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22B0B37DE95A3C504CADA22 /* Pods-SearchTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchTicket.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchTicket/Pods-SearchTicket.release.xcconfig"; sourceTree = "<group>"; };
+		F7BA80EB3EA0B0908552A1E5 /* Pods-SearchTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchTicket/Pods-SearchTicket.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17B23BA81F7B566E0033ECEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBAD0BE86A8B411DC0E43BC0 /* Pods_SearchTicket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B23BBC1F7B566E0033ECEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B23BC71F7B566E0033ECEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17B23BA21F7B566E0033ECEC = {
+			isa = PBXGroup;
+			children = (
+				17B23BAD1F7B566E0033ECEC /* SearchTicket */,
+				17B23BC21F7B566E0033ECEC /* SearchTicketTests */,
+				17B23BCD1F7B566E0033ECEC /* SearchTicketUITests */,
+				17B23BAC1F7B566E0033ECEC /* Products */,
+				1B7831468F39A7F69D64D1A1 /* Pods */,
+				C138EAB3195A144ACFAF6EBC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		17B23BAC1F7B566E0033ECEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17B23BAB1F7B566E0033ECEC /* SearchTicket.app */,
+				17B23BBF1F7B566E0033ECEC /* SearchTicketTests.xctest */,
+				17B23BCA1F7B566E0033ECEC /* SearchTicketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17B23BAD1F7B566E0033ECEC /* SearchTicket */ = {
+			isa = PBXGroup;
+			children = (
+				17B23BAE1F7B566E0033ECEC /* AppDelegate.swift */,
+				17B23BDC1F7B7CBC0033ECEC /* DataModel.swift */,
+				17B23BB01F7B566E0033ECEC /* ViewController.swift */,
+				173E5DFA1F7C95C0001B058D /* 吹牛图标.png */,
+				17B23BB21F7B566E0033ECEC /* Main.storyboard */,
+				17B23BB51F7B566E0033ECEC /* Assets.xcassets */,
+				17B23BB71F7B566E0033ECEC /* LaunchScreen.storyboard */,
+				17B23BBA1F7B566E0033ECEC /* Info.plist */,
+			);
+			path = SearchTicket;
+			sourceTree = "<group>";
+		};
+		17B23BC21F7B566E0033ECEC /* SearchTicketTests */ = {
+			isa = PBXGroup;
+			children = (
+				17B23BC31F7B566E0033ECEC /* SearchTicketTests.swift */,
+				17B23BC51F7B566E0033ECEC /* Info.plist */,
+			);
+			path = SearchTicketTests;
+			sourceTree = "<group>";
+		};
+		17B23BCD1F7B566E0033ECEC /* SearchTicketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17B23BCE1F7B566E0033ECEC /* SearchTicketUITests.swift */,
+				17B23BD01F7B566E0033ECEC /* Info.plist */,
+			);
+			path = SearchTicketUITests;
+			sourceTree = "<group>";
+		};
+		1B7831468F39A7F69D64D1A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7BA80EB3EA0B0908552A1E5 /* Pods-SearchTicket.debug.xcconfig */,
+				D22B0B37DE95A3C504CADA22 /* Pods-SearchTicket.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C138EAB3195A144ACFAF6EBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FE5E23AC0F9F7A8388E3F9C /* Pods_SearchTicket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17B23BAA1F7B566E0033ECEC /* SearchTicket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17B23BD31F7B566E0033ECEC /* Build configuration list for PBXNativeTarget "SearchTicket" */;
+			buildPhases = (
+				7D9F4110CC6CC17F077D1CCD /* [CP] Check Pods Manifest.lock */,
+				17B23BA71F7B566E0033ECEC /* Sources */,
+				17B23BA81F7B566E0033ECEC /* Frameworks */,
+				17B23BA91F7B566E0033ECEC /* Resources */,
+				6FEB44DFE7133F811E8B202F /* [CP] Embed Pods Frameworks */,
+				7446D08BBA96A3F075AC3C08 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SearchTicket;
+			productName = SearchTicket;
+			productReference = 17B23BAB1F7B566E0033ECEC /* SearchTicket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17B23BBE1F7B566E0033ECEC /* SearchTicketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17B23BD61F7B566E0033ECEC /* Build configuration list for PBXNativeTarget "SearchTicketTests" */;
+			buildPhases = (
+				17B23BBB1F7B566E0033ECEC /* Sources */,
+				17B23BBC1F7B566E0033ECEC /* Frameworks */,
+				17B23BBD1F7B566E0033ECEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17B23BC11F7B566E0033ECEC /* PBXTargetDependency */,
+			);
+			name = SearchTicketTests;
+			productName = SearchTicketTests;
+			productReference = 17B23BBF1F7B566E0033ECEC /* SearchTicketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17B23BC91F7B566E0033ECEC /* SearchTicketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17B23BD91F7B566E0033ECEC /* Build configuration list for PBXNativeTarget "SearchTicketUITests" */;
+			buildPhases = (
+				17B23BC61F7B566E0033ECEC /* Sources */,
+				17B23BC71F7B566E0033ECEC /* Frameworks */,
+				17B23BC81F7B566E0033ECEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17B23BCC1F7B566E0033ECEC /* PBXTargetDependency */,
+			);
+			name = SearchTicketUITests;
+			productName = SearchTicketUITests;
+			productReference = 17B23BCA1F7B566E0033ECEC /* SearchTicketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17B23BA31F7B566E0033ECEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Bolo;
+				TargetAttributes = {
+					17B23BAA1F7B566E0033ECEC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+					17B23BBE1F7B566E0033ECEC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 17B23BAA1F7B566E0033ECEC;
+					};
+					17B23BC91F7B566E0033ECEC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 17B23BAA1F7B566E0033ECEC;
+					};
+				};
+			};
+			buildConfigurationList = 17B23BA61F7B566E0033ECEC /* Build configuration list for PBXProject "SearchTicket" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17B23BA21F7B566E0033ECEC;
+			productRefGroup = 17B23BAC1F7B566E0033ECEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17B23BAA1F7B566E0033ECEC /* SearchTicket */,
+				17B23BBE1F7B566E0033ECEC /* SearchTicketTests */,
+				17B23BC91F7B566E0033ECEC /* SearchTicketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17B23BA91F7B566E0033ECEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				173E5DFB1F7C95CA001B058D /* 吹牛图标.png in Resources */,
+				17B23BB91F7B566E0033ECEC /* LaunchScreen.storyboard in Resources */,
+				17B23BB61F7B566E0033ECEC /* Assets.xcassets in Resources */,
+				17B23BB41F7B566E0033ECEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B23BBD1F7B566E0033ECEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B23BC81F7B566E0033ECEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FEB44DFE7133F811E8B202F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchTicket/Pods-SearchTicket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7446D08BBA96A3F075AC3C08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchTicket/Pods-SearchTicket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D9F4110CC6CC17F077D1CCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17B23BA71F7B566E0033ECEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B23BB11F7B566E0033ECEC /* ViewController.swift in Sources */,
+				17B23BAF1F7B566E0033ECEC /* AppDelegate.swift in Sources */,
+				17B23BDD1F7B7CBC0033ECEC /* DataModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B23BBB1F7B566E0033ECEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B23BC41F7B566E0033ECEC /* SearchTicketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B23BC61F7B566E0033ECEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B23BCF1F7B566E0033ECEC /* SearchTicketUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17B23BC11F7B566E0033ECEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17B23BAA1F7B566E0033ECEC /* SearchTicket */;
+			targetProxy = 17B23BC01F7B566E0033ECEC /* PBXContainerItemProxy */;
+		};
+		17B23BCC1F7B566E0033ECEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17B23BAA1F7B566E0033ECEC /* SearchTicket */;
+			targetProxy = 17B23BCB1F7B566E0033ECEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17B23BB21F7B566E0033ECEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17B23BB31F7B566E0033ECEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17B23BB71F7B566E0033ECEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17B23BB81F7B566E0033ECEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17B23BD11F7B566E0033ECEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17B23BD21F7B566E0033ECEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17B23BD41F7B566E0033ECEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7BA80EB3EA0B0908552A1E5 /* Pods-SearchTicket.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SD3R6PGCNS;
+				INFOPLIST_FILE = SearchTicket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengei.iap.test.SearchTicket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17B23BD51F7B566E0033ECEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D22B0B37DE95A3C504CADA22 /* Pods-SearchTicket.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SD3R6PGCNS;
+				INFOPLIST_FILE = SearchTicket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengei.iap.test.SearchTicket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17B23BD71F7B566E0033ECEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SD3R6PGCNS;
+				INFOPLIST_FILE = SearchTicketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengei.iap.test.SearchTicketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SearchTicket.app/SearchTicket";
+			};
+			name = Debug;
+		};
+		17B23BD81F7B566E0033ECEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SD3R6PGCNS;
+				INFOPLIST_FILE = SearchTicketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengei.iap.test.SearchTicketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SearchTicket.app/SearchTicket";
+			};
+			name = Release;
+		};
+		17B23BDA1F7B566E0033ECEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SD3R6PGCNS;
+				INFOPLIST_FILE = SearchTicketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengei.iap.test.SearchTicketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SearchTicket;
+			};
+			name = Debug;
+		};
+		17B23BDB1F7B566E0033ECEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SD3R6PGCNS;
+				INFOPLIST_FILE = SearchTicketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengei.iap.test.SearchTicketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SearchTicket;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17B23BA61F7B566E0033ECEC /* Build configuration list for PBXProject "SearchTicket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17B23BD11F7B566E0033ECEC /* Debug */,
+				17B23BD21F7B566E0033ECEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17B23BD31F7B566E0033ECEC /* Build configuration list for PBXNativeTarget "SearchTicket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17B23BD41F7B566E0033ECEC /* Debug */,
+				17B23BD51F7B566E0033ECEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17B23BD61F7B566E0033ECEC /* Build configuration list for PBXNativeTarget "SearchTicketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17B23BD71F7B566E0033ECEC /* Debug */,
+				17B23BD81F7B566E0033ECEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17B23BD91F7B566E0033ECEC /* Build configuration list for PBXNativeTarget "SearchTicketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17B23BDA1F7B566E0033ECEC /* Debug */,
+				17B23BDB1F7B566E0033ECEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17B23BA31F7B566E0033ECEC /* Project object */;
+}
