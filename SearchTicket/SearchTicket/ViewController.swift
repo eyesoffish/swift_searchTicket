@@ -12,8 +12,9 @@ import SwiftyJSON
 import UserNotifications
 class ViewController: UIViewController {
 
-    var zy_cd_URL = "https://kyfw.12306.cn/otn/leftTicket/queryX?leftTicketDTO.train_date=2017-10-08&leftTicketDTO.from_station=ZYW&leftTicketDTO.to_station=CDW&purpose_codes=ADULT"
-    var cd_zy_URL = "https://kyfw.12306.cn/otn/leftTicket/queryX?leftTicketDTO.train_date=2017-10-07&leftTicketDTO.from_station=CDW&leftTicketDTO.to_station=ZYW&purpose_codes=ADULT"
+    var request_url:String!
+    var beginCity:String = "CDW"
+    var endCity:String = "ZYW"
     
     @IBOutlet weak var zy_cd_btn: UIButton!
     
@@ -27,17 +28,17 @@ class ViewController: UIViewController {
     var stringDate:String!{
         didSet{
             self.labelDate.text = "乘车日期：\(stringDate!)"
-            self.zy_cd_URL = "https://kyfw.12306.cn/otn/leftTicket/queryX?leftTicketDTO.train_date=\(self.stringDate!)&leftTicketDTO.from_station=ZYW&leftTicketDTO.to_station=CDW&purpose_codes=ADULT"
-            self.cd_zy_URL = "https://kyfw.12306.cn/otn/leftTicket/queryX?leftTicketDTO.train_date=\(self.stringDate!)&leftTicketDTO.from_station=CDW&leftTicketDTO.to_station=ZYW&purpose_codes=ADULT"
+            
         }
     }
     
     @IBOutlet weak var search: UIButton!
-    
+    /** 马上查询 */
+    @IBOutlet weak var btnSearchNow: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var model:DataModel?{
         didSet{
-            self.model?.haveTicket.forEach{ self.sendNotification($0) }
+            self.model?.haveTicket.forEach{ self.sendNotification($0.string) }
             self.tableView.reloadData()
         }
     }
@@ -52,24 +53,49 @@ class ViewController: UIViewController {
         stringDate = formatter.string(from: today)
         self.labelDate.text = "今天：\(stringDate!)"
         self.tableView.dataSource = self
-        self.tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
+        self.tableView.register(UINib(nibName:"TableViewCell",bundle:nil), forCellReuseIdentifier: "cell")
         self.title = "总查询次数：0次"
+        self.picker.date = today
     }
 
+    @IBAction func search_rightNow(_ sender: UIButton) {
+        if sender.titleLabel?.text == "立刻查询"{
+            requestTicket()
+            sender.setTitle("查询中...", for: .normal)
+        }else{
+            alertMessage(control: self, message: "请稍后...")
+        }
+    }
+    @IBAction func clear_data(_ sender: Any) {
+        self.model?.haveTicket.removeAll()
+        self.tableView.reloadData()
+    }
 }
 
 
 
 extension ViewController{
     
+    /** 出发地 */
     @IBAction func zy_cd_click(_ sender: UIButton) {
         clearbtnState()
-        sender.isSelected = true
+        let vc = CityController()
+        vc.callback = { value in
+            self.beginCity = value.1
+            sender.setTitle(value.0, for: .normal)
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    /** 目的地 */
     @IBAction func cd_zy_click(_ sender: UIButton) {
         clearbtnState()
-        sender.isSelected = true
+        let vc = CityController()
+        vc.callback = {value in
+            self.endCity = value.1
+            sender.setTitle(value.0, for: .normal)
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func chooseDateClick(_ sender: UIButton) {
@@ -79,11 +105,13 @@ extension ViewController{
     }
     
     @IBAction func searchClick(_ sender: UIButton) {
-        if sender.titleLabel?.text == "开始查询"{
+        
+        if sender.titleLabel?.text == "定时查询"{
+            alertMessage(control: self, message: "开始定时查询，每隔5分钟查询一次")
             sender.setTitle("定时查询中...", for: .normal)
             startTimer()
         }else{
-            sender.setTitle("开始查询", for: .normal)
+            sender.setTitle("定时查询", for: .normal)
             stopTimer()
         }
     }
@@ -116,23 +144,34 @@ extension ViewController{
         self.searchNum += 1
         self.title = "总查询次数：\(self.searchNum)次"
         
-        let url = self.zy_cd_btn.isSelected ? self.zy_cd_URL : self.cd_zy_URL
+        self.request_url = "https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date=\(self.stringDate!)&leftTicketDTO.from_station=\(beginCity)&leftTicketDTO.to_station=\(endCity)&purpose_codes=ADULT"
         
         let manager = SessionManager.default
+        //如果限制了https:的话就调用这个
         manager.delegate.sessionDidReceiveChallenge = {
             session,challenge in
             return (URLSession.AuthChallengeDisposition.useCredential,URLCredential(trust:challenge.protectionSpace.serverTrust!))
         }
-        
+        print(request_url)
         //查询
-        Alamofire.request(url,method:.get).responseJSON { (response) in
+        Alamofire.request(self.request_url,method:.get).responseJSON { (response) in
+            self.btnSearchNow.setTitle("立刻查询", for: .normal)
             if response.result.isSuccess{
                 if let value = response.result.value{
+                    print(value)
                     let json = JSON(value)
-                    let data = json["data"].dictionary
-                    let reslut = data!["result"]!.array
-                    self.model = DataModel(data: reslut!)
+                    guard let data = json["data"].dictionary else {
+                        alertMessage(control: self, message: json["data"].string ?? "")
+                        return
+                    }
+                    guard let result = data["result"]?.array else {
+                        alertMessage(control: self, message: json["data"].string ?? "")
+                        return
+                    }
+                    self.model = DataModel(data: result)
                 }
+            }else{
+                alertMessage(control: self, message: "请求出错误")
             }
         }
     }
@@ -171,9 +210,9 @@ extension ViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = self.model?.haveTicket[indexPath.row]
-        cell?.textLabel?.textColor = UIColor.green
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCell
+//        cell?.labelContent.text = self.model?.haveTicket[indexPath.row]
+        cell?.labelContent.attributedText = self.model?.haveTicket[indexPath.row]
         return cell!
     }
 }

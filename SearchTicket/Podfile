@@ -7,5 +7,5 @@ target 'SearchTicket' do
 
   pod 'Alamofire'
   pod "SwiftyJSON"
-
+  
 end

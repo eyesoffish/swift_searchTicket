@@ -16,6 +16,10 @@
 		17B23BC41F7B566E0033ECEC /* SearchTicketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B23BC31F7B566E0033ECEC /* SearchTicketTests.swift */; };
 		17B23BCF1F7B566E0033ECEC /* SearchTicketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B23BCE1F7B566E0033ECEC /* SearchTicketUITests.swift */; };
 		17B23BDD1F7B7CBC0033ECEC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B23BDC1F7B7CBC0033ECEC /* DataModel.swift */; };
+		972A69632022B03200EA4A29 /* ObjExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A69622022B03200EA4A29 /* ObjExtension.swift */; };
+		972A69662022B6F200EA4A29 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A69642022B6F200EA4A29 /* TableViewCell.swift */; };
+		972A69672022B6F200EA4A29 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972A69652022B6F200EA4A29 /* TableViewCell.xib */; };
+		972A69692023105400EA4A29 /* CityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A69682023105400EA4A29 /* CityController.swift */; };
 		BBAD0BE86A8B411DC0E43BC0 /* Pods_SearchTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE5E23AC0F9F7A8388E3F9C /* Pods_SearchTicket.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,10 @@
 		17B23BD01F7B566E0033ECEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B23BDC1F7B7CBC0033ECEC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		5FE5E23AC0F9F7A8388E3F9C /* Pods_SearchTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		972A69622022B03200EA4A29 /* ObjExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjExtension.swift; sourceTree = "<group>"; };
+		972A69642022B6F200EA4A29 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		972A69652022B6F200EA4A29 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		972A69682023105400EA4A29 /* CityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityController.swift; sourceTree = "<group>"; };
 		D22B0B37DE95A3C504CADA22 /* Pods-SearchTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchTicket.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchTicket/Pods-SearchTicket.release.xcconfig"; sourceTree = "<group>"; };
 		F7BA80EB3EA0B0908552A1E5 /* Pods-SearchTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchTicket/Pods-SearchTicket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +124,10 @@
 				17B23BB51F7B566E0033ECEC /* Assets.xcassets */,
 				17B23BB71F7B566E0033ECEC /* LaunchScreen.storyboard */,
 				17B23BBA1F7B566E0033ECEC /* Info.plist */,
+				972A69622022B03200EA4A29 /* ObjExtension.swift */,
+				972A69642022B6F200EA4A29 /* TableViewCell.swift */,
+				972A69652022B6F200EA4A29 /* TableViewCell.xib */,
+				972A69682023105400EA4A29 /* CityController.swift */,
 			);
 			path = SearchTicket;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				173E5DFB1F7C95CA001B058D /* 吹牛图标.png in Resources */,
+				972A69672022B6F200EA4A29 /* TableViewCell.xib in Resources */,
 				17B23BB91F7B566E0033ECEC /* LaunchScreen.storyboard in Resources */,
 				17B23BB61F7B566E0033ECEC /* Assets.xcassets in Resources */,
 				17B23BB41F7B566E0033ECEC /* Main.storyboard in Resources */,
@@ -346,7 +359,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972A69692023105400EA4A29 /* CityController.swift in Sources */,
+				972A69662022B6F200EA4A29 /* TableViewCell.swift in Sources */,
 				17B23BB11F7B566E0033ECEC /* ViewController.swift in Sources */,
+				972A69632022B03200EA4A29 /* ObjExtension.swift in Sources */,
 				17B23BAF1F7B566E0033ECEC /* AppDelegate.swift in Sources */,
 				17B23BDD1F7B7CBC0033ECEC /* DataModel.swift in Sources */,
 			);
@@ -516,7 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SD3R6PGCNS;
+				DEVELOPMENT_TEAM = SAV278UQJ6;
 				INFOPLIST_FILE = SearchTicket/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -533,7 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SD3R6PGCNS;
+				DEVELOPMENT_TEAM = SAV278UQJ6;
 				INFOPLIST_FILE = SearchTicket/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
